@@ -45,7 +45,15 @@ export default function Home() {
   return (
     <div>
       <h1>Veri Görselleştirme</h1>
-      <Bar data={chartData} />
+      <div style={{ position: 'relative', width: '100%', height: '400px' }}>
+        <Bar
+          data={chartData}
+          options={{
+            responsive: true,
+            maintainAspectRatio: false,
+          }}
+        />
+      </div>
     </div>
   );
 }
